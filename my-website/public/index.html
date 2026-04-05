@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabachino A&E</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Tabachino A&E</h1>
+  <nav>
+    <a href="index.html">Shop</a>
+    <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+  </nav>
+</header>
+
+<section class="products" id="product-list"></section>
+  <div class="product">
+    <img src="https://via.placeholder.com/200">
+    <h3>Marlboro Red</h3>
+    <p>$8.00</p>
+    <button onclick="addToCart('Marlboro Red', 8)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/200">
+    <h3>Davidoff Gold</h3>
+    <p>$10.00</p>
+    <button onclick="addToCart('Davidoff Gold', 10)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/200">
+    <h3>Rolling Tobacco</h3>
+    <p>$6.00</p>
+    <button onclick="addToCart('Rolling Tobacco', 6)">Add to Cart</button>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

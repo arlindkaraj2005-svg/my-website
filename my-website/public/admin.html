@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Tabachino A&E</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Admin Dashboard</h1>
+  <nav>
+    <a href="index.html">Shop</a>
+  </nav>
+</header>
+
+<section class="admin-panel">
+  <h2>Add Product</h2>
+
+  <input type="text" id="name" placeholder="Product Name">
+  <input type="number" id="price" placeholder="Price">
+  <input type="text" id="image" placeholder="Image URL">
+
+  <button onclick="addProduct()">Add Product</button>
+
+  <h2>Product List</h2>
+  <div id="admin-products"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
