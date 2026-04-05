@@ -1,7 +1,8 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let products = JSON.parse(localStorage.getItem("products")) || [
-  { name: "Marlboro Red", price: 8, image: "https://via.placeholder.com/200" },
-  { name: "Davidoff Gold", price: 10, image: "https://via.placeholder.com/200" }
+  { name: "Marlboro E Kuqe", price: 500, image: "assets/marlboro-red.jpg" },
+  { name: "Marlboro Gold", price: 420, image: "assets/marlboro-gold.jpg" },
+  { name: "Rizla OCB", price: 150, image: "assets/rolling-paper.jpg" }
 ];
 
 // ---------------- CART ----------------
@@ -34,7 +35,7 @@ function loadCart() {
     total += item.price;
   });
 
-  document.getElementById("total").innerText = "Total: $" + total;
+  document.getElementById("total").innerText = "Total: LEK" + total;
 }
 
 function removeFromCart(index) {
