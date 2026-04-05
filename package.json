@@ -1,0 +1,9 @@
+{
+  "name": "force-recovery",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {}
+}
