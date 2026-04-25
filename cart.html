@@ -2,24 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cart - Tabachino A&E</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabachino A&E | Cart</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="js/products-data.js"></script>
+  <script defer src="js/storage.js"></script>
+  <script defer src="js/ui.js"></script>
+  <script defer src="js/cart-page.js"></script>
 </head>
 <body>
+  <header class="site-header">
+    <div>
+      <p class="brand-kicker">Tabachino A&E</p>
+      <h1>Your Cart</h1>
+    </div>
 
-<header>
-  <h1>Your Cart</h1>
-  <nav>
-    <a href="index.html">Shop</a>
-  </nav>
-</header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Shop</a>
+      <a href="cart.html" aria-current="page">Cart (<span id="cart-count">0</span>)</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
 
-<section id="cart-items"></section>
+  <main class="page-shell">
+    <section class="page-intro">
+      <h2>Cart items</h2>
+      <p>Review the items in your cart before checkout.</p>
+    </section>
 
-<h2 id="total"></h2>
+    <section id="cart-items" class="stack-list" aria-label="Cart items"></section>
 
-<a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+    <section class="summary-card" aria-label="Cart summary">
+      <div>
+        <p class="summary-label">Total</p>
+        <strong id="cart-total" class="summary-value">0 Lek</strong>
+      </div>
 
-<script src="script.js"></script>
+      <a id="checkout-button" class="button-link" href="checkout.html">Proceed to Checkout</a>
+    </section>
+  </main>
 </body>
 </html>

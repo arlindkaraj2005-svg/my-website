@@ -2,44 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tabachino A&E</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabachino A&E | Shop</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="js/products-data.js"></script>
+  <script defer src="js/storage.js"></script>
+  <script defer src="js/ui.js"></script>
+  <script defer src="js/index-page.js"></script>
 </head>
 <body>
+  <header class="site-header">
+    <div>
+      <p class="brand-kicker">Tabachino A&E</p>
+      <h1>Shop</h1>
+    </div>
 
-<header>
-  <h1>Tabachino A&E</h1>
-  <nav>
-    <a href="index.html">Shop</a>
-    <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
-  </nav>
-</header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Shop</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
 
-<section class="products" id="product-list">
+  <main class="page-shell">
+    <section class="page-intro">
+      <h2>Featured products</h2>
+      <p>Browse the current stock and add items to your cart.</p>
+    </section>
 
-  <div class="product">
-    <img src="assets/marlboro-red.jpg" alt="Marlboro Red">
-    <h3>Marlboro E Kuqe</h3>
-    <p>500</p>
-    <button onclick="addToCart('Marlboro E Kuqe', 500)">Add to Cart</button>
-  </div>
-
-  <div class="product">
-    <img src="assets/marlboro-gold.jpg" alt="Marlboro Gold">
-    <h3>Marlboro Gold</h3>
-    <p>420</p>
-    <button onclick="addToCart('Marlboro Gold', 420)">Add to Cart</button>
-  </div>
-
-  <div class="product">
-    <img src="assets/ocb rizla.jpg" alt="Rolling Paper">
-    <h3>Rolling Paper</h3>
-    <p>150</p>
-    <button onclick="addToCart('Rizla OCB', 150)">Add to Cart</button>
-  </div>
-
-</section>
-
-<script src="script.js"></script>
+    <section class="products" id="product-list" aria-label="Product list"></section>
+  </main>
 </body>
 </html>

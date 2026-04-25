@@ -2,25 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Checkout - Tabachino A&E</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabachino A&E | Checkout</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="js/products-data.js"></script>
+  <script defer src="js/storage.js"></script>
+  <script defer src="js/ui.js"></script>
+  <script defer src="js/checkout-page.js"></script>
 </head>
 <body>
+  <header class="site-header">
+    <div>
+      <p class="brand-kicker">Tabachino A&E</p>
+      <h1>Checkout</h1>
+    </div>
 
-<header>
-  <h1>Checkout</h1>
-</header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Shop</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="checkout.html" aria-current="page">Checkout</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
 
-<form class="checkout-form" onsubmit="placeOrder(event)">
-  <input type="text" placeholder="Full Name" required>
-  <input type="text" placeholder="Address" required>
-  <input type="text" placeholder="City" required>
-  <input type="text" placeholder="Postal Code" required>
-  <input type="tel" placeholder="Phone Number" required>
+  <main class="page-shell checkout-layout">
+    <section class="page-intro">
+      <h2>Complete your order</h2>
+      <p>Fill in your details to place the order.</p>
+    </section>
 
-  <button type="submit">Place Order</button>
-</form>
+    <section class="checkout-panel">
+      <p id="order-summary" class="summary-label">Loading order summary...</p>
+      <p id="checkout-message" class="checkout-message" aria-live="polite"></p>
 
-<script src="script.js"></script>
+      <form id="checkout-form" class="checkout-form">
+        <input type="text" name="fullName" placeholder="Full Name" autocomplete="name" required>
+        <input type="text" name="address" placeholder="Address" autocomplete="street-address" required>
+        <input type="text" name="city" placeholder="City" autocomplete="address-level2" required>
+        <input type="text" name="postalCode" placeholder="Postal Code" autocomplete="postal-code" required>
+        <input type="tel" name="phoneNumber" placeholder="Phone Number" autocomplete="tel" required>
+
+        <button type="submit" class="checkout-action">Place Order</button>
+      </form>
+    </section>
+  </main>
 </body>
 </html>

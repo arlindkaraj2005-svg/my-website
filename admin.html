@@ -2,31 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Admin - Tabachino A&E</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabachino A&E | Admin</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="js/products-data.js"></script>
+  <script defer src="js/storage.js"></script>
+  <script defer src="js/ui.js"></script>
+  <script defer src="js/admin-page.js"></script>
 </head>
 <body>
+  <header class="site-header">
+    <div>
+      <p class="brand-kicker">Tabachino A&E</p>
+      <h1>Admin</h1>
+    </div>
 
-<header>
-  <h1>Admin Dashboard</h1>
-  <nav>
-    <a href="index.html">Shop</a>
-  </nav>
-</header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Shop</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="admin.html" aria-current="page">Admin</a>
+    </nav>
+  </header>
 
-<section class="admin-panel">
-  <h2>Add Product</h2>
+  <main class="page-shell admin-layout">
+    <section class="page-intro">
+      <h2>Manage products</h2>
+      <p>Add new products or remove items from the catalog.</p>
+    </section>
 
-  <input type="text" id="name" placeholder="Product Name">
-  <input type="number" id="price" placeholder="Price">
-  <input type="text" id="image" placeholder="Image URL">
+    <section class="form-card">
+      <p id="admin-message" class="admin-message" aria-live="polite"></p>
 
-  <button onclick="addProduct()">Add Product</button>
+      <form id="product-form" class="admin-form">
+        <input type="text" id="name" name="name" placeholder="Product Name" required>
+        <input type="number" id="price" name="price" placeholder="Price" min="1" step="1" required>
+        <input type="text" id="image" name="image" placeholder="Image URL" required>
+        <input type="text" id="alt" name="alt" placeholder="Image Alt Text">
 
-  <h2>Product List</h2>
-  <div id="admin-products"></div>
-</section>
+        <button type="submit">Add Product</button>
+      </form>
+    </section>
 
-<script src="script.js"></script>
+    <section class="stack-list" aria-label="Saved products">
+      <h2>Product list</h2>
+      <div id="admin-products" class="stack-list"></div>
+    </section>
+  </main>
 </body>
 </html>
